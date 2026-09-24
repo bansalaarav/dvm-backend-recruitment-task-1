@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>Music</title>
+    </head>
+    <body>
+        <a href="{% url 'music:index' %}">go home</a>
+        <p>Sorted by Last.fm based on popularity</p>
+        <ol>
+            {% for entry in data %}
+                <li>
+                    <a href="{{ entry.url }}">{{ entry.name }}</a>
+                    <br>
+                    {% if type != "artist" %}
+                        Artist: {{ entry.artist.name }}
+                    {% endif %}
+                </li>
+                <br>
+            {% endfor %}
+        </ol>
+        <a href="{% querystring limit=limit|add:10 %}">Load 10 more</a>
+    </body>
+</html>

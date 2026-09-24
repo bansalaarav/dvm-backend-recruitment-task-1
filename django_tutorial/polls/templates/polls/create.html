@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Create page</title>
+  </head>
+  <body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+
+        {{ formset.management_form }}
+        <div id="choices">
+            {% for f in formset %}{{ f }}{% endfor %}
+        </div>
+        <template id="blank">{{ formset.empty_form }}</template>
+        <button type="button" onclick="addChoice()">Add choice</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function addChoice() {
+            const total = document.querySelector("[name$=TOTAL_FORMS]");
+            const row = document.getElementById("blank").innerHTML.replace(/__prefix__/g, total.value);
+            document.getElementById("choices").insertAdjacentHTML("beforeend", row);
+            total.value++;
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+The additional feature added was to give users the ability to create their own poll. To use this feature, go to the /polls/ page and click on 'Create your own poll'. The user will then be able to enter a question, add one or more choices, and submit their poll.

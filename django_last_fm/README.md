@@ -1,0 +1,1 @@
+The additional feature added was two buttons that display the top artists and top tracks of all time.

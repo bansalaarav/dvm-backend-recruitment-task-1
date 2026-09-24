@@ -1,0 +1,11 @@
+body {
+    background: white url("images/background.jpg") center / cover no-repeat fixed;
+}
+
+a {
+    color: white;
+}
+
+li a {
+    color: green;
+}

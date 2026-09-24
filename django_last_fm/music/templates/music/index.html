@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>App</title>
+    </head>
+    <body>
+        <form action="{% url 'music:country' %}" method="get">
+            <label for="country">Country: </label>
+            <input type="text" name="country" id="country">
+            <button type="submit" name="type" value="artist">Find top artists</button>
+            <button type="submit" name="type" value="track">Find top tracks</button>
+        </form>
+        <br>
+        <form action="{% url 'music:search' %}" method="get">
+            <label for="artist_search_query">Artist: </label>
+            <input type="text" name="query" id="artist_search_query">
+            <button type="submit" name="search_type" value="artist">Search</button>
+        </form>
+        <br>
+        <form action="{% url 'music:search' %}" method="get">
+            <label for="album_search_query">Album: </label>
+            <input type="text" name="query" id="album_search_query">
+            <button type="submit" name="search_type" value="album">Search</button>
+        </form>
+        <br>
+        <form action="{% url 'music:search' %}" method="get">
+            <label for="track_search_query">Track: </label>
+            <input type="text" name="query" id="track_search_query">
+            <button type="submit" name="search_type" value="track">Search</button>
+        </form>
+        <br>
+        <form action="{% url 'music:charts' %}" method="get">
+            <button type="submit" name="chart_type" value="artist">Top Artists OAT</button>
+            <button type="submit" name="chart_type" value="track">Top Tracks OAT</button>
+        </form>
+    </body>
+</html>
