@@ -14,9 +14,9 @@
             {% endfor %}
         </ul>
         <br>
-        <a href="{% url 'polls:create' %}">Create your own poll</a>
     {% else %}
         <p>No polls are available.</p>
     {% endif %}
+    <a href="{% url 'polls:create' %}">Create your own poll</a>
   </body>
 </html>
