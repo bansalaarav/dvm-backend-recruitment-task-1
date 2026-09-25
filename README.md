@@ -15,7 +15,8 @@ This repository has two Django projects:
    cd django_last_fm
 ```
 3. **(Optional) Create and activate a virtual environment**
-4. **Install dependencies**
+
+5. **Install dependencies**
 ```bash
    pip install -r requirements.txt
 ```
