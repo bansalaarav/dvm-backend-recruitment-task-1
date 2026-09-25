@@ -1,7 +1,7 @@
 This repository has two Django projects:
 
 - **django_tutorial**: includes a database and admin panel
-- **django_last_fm**: does not require database setup
+- **django_last_fm**: does not require database or admin setup
 
 1. **Clone the repository**
 ```bash
