@@ -1,5 +1,6 @@
 body {
     background: white url("images/background.jpg") center / cover no-repeat fixed;
+    color: white;
 }
 
 a {
